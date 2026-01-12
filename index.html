@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Guest Accommodations</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1>Guest Accommodations</h1>
+  <p>We've curated a selection of beautiful accommodations near the venue.</p>
+</header>
+
+<section class="grid">
+  <div class="card">
+    <img src="https://picsum.photos/400/250?1">
+    <h3>Cabin 01</h3>
+    <p>Sleeps 4 · Shared Ablutions</p>
+    <div class="price">$180 / night</div>
+    <button onclick="openModal('Cabin 01',180)">Book Now</button>
+  </div>
+
+  <div class="card booked">
+    <span class="badge">Fully Booked</span>
+    <img src="https://picsum.photos/400/250?2">
+    <h3>Cabin 02</h3>
+    <p>Sleeps 4 · Shared Ablutions</p>
+    <div class="price">$180 / night</div>
+    <button disabled>Unavailable</button>
+  </div>
+
+  <div class="card">
+    <img src="https://picsum.photos/400/250?3">
+    <h3>Bedroom 01</h3>
+    <p>Sleeps 2 · Private Room</p>
+    <div class="price">$220 / night</div>
+    <button onclick="openModal('Bedroom 01',220)">Book Now</button>
+  </div>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <h2 id="modalTitle"></h2>
+    <form>
+      <input placeholder="Full Name" required>
+      <input placeholder="Email" type="email" required>
+      <input placeholder="Phone Number">
+      <input type="date" required>
+      <input type="date" required>
+      <input type="number" placeholder="Guests">
+      <p id="priceText"></p>
+      <button type="submit">Confirm Booking Request</button>
+    </form>
+  </div>
+</div>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
